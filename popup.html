@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Docs offline</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Offline productivity</p>
+          <h1>Google Docs offline</h1>
+        </div>
+        <span id="stats" class="stats">0 loaded</span>
+      </header>
+
+      <label class="search-shell" for="searchInput">
+        <input
+          id="searchInput"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search by title, tag, keyword, or language"
+        />
+      </label>
+
+      <section class="proxy-panel">
+        <div>
+          <p class="proxy-title">Session Proxy</p>
+          <p id="proxyStatus" class="proxy-status">Disconnected</p>
+        </div>
+        <div class="proxy-controls">
+          <label class="proxy-field" for="proxyScheme">
+            <span>Protocol</span>
+            <select id="proxyScheme" class="proxy-select">
+              <option value="http">HTTP</option>
+              <option value="https">HTTPS</option>
+              <option value="socks4">SOCKS4</option>
+              <option value="socks5">SOCKS5</option>
+            </select>
+          </label>
+          <label class="proxy-field proxy-field-host" for="proxyHost">
+            <span>Host</span>
+            <input id="proxyHost" class="proxy-input" type="text" value="127.0.0.1" />
+          </label>
+          <label class="proxy-field" for="proxyPort">
+            <span>Port</span>
+            <input id="proxyPort" class="proxy-input proxy-port" type="number" min="1" max="65535" value="40000" />
+          </label>
+          <button id="proxyToggleButton" class="proxy-button" type="button">Connect</button>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="results-panel">
+          <div class="panel-title">
+            <span>Results</span>
+            <span id="resultCount">0</span>
+          </div>
+          <div id="results" class="results" aria-live="polite"></div>
+        </aside>
+
+        <section class="detail-panel">
+          <div id="emptyState" class="empty-state">
+            Edit, create and view your documents, spreadsheets and presentations - all without Internet access.
+          </div>
+
+          <article id="detailCard" class="detail-card hidden">
+            <div class="detail-head">
+              <div>
+                <p id="detailLanguage" class="detail-language"></p>
+                <h2 id="detailTitle"></h2>
+              </div>
+              <button id="copyButton" class="copy-button" type="button">
+                Copy code
+              </button>
+            </div>
+
+            <p id="detailSummary" class="detail-summary"></p>
+            <div id="detailMeta" class="detail-meta hidden"></div>
+            <p id="detailQuestion" class="detail-question hidden"></p>
+            <div id="detailTags" class="tag-row"></div>
+            <pre class="code-block"><code id="detailCode"></code></pre>
+            <button id="removeButton" class="remove-button" type="button">
+              Remove extension
+            </button>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

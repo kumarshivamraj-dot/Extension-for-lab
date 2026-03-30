@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "id": "python-read-json",
+      "title": "Read JSON from a file",
+      "language": "python",
+      "tags": ["json", "files", "basics"],
+      "summary": "Open a JSON file with a context manager and parse it into Python objects.",
+      "code": "import json\n\nwith open(\"data.json\", \"r\", encoding=\"utf-8\") as file:\n    payload = json.load(file)\n\nprint(payload)"
+    }
+  ]
+}

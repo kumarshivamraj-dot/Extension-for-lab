@@ -1,0 +1,866 @@
+{
+  "items": [
+    {
+      "id": "CB10_17",
+      "title": "arrival and departure delay statistics",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "arrival and departure delay statistics",
+      "marks": 10,
+      "tags": [
+        "nycflights13",
+        "mean",
+        "median",
+        "sd",
+        "arr_delay",
+        "dep_delay"
+      ],
+      "segment": "probablity",
+      "searchText": "arrival and departure delay statistics probability distributions and statistical analysis in r r arrival and departure delay statistics nycflights13 mean median sd arr_delay dep_delay nycflights13 mean median sd arr_delay dep_delay code-based 10 mark questions bank with r code using the nycflights13 dataset, write an r program to compute the mean, median, and standard deviation of arrival delay and departure delay. display the results neatly and interpret them. library(nycflights13) flights <- nycflights13::flights mean_arr <- mean(flights$arr_delay, na.rm = true) median_arr <- median(flights$arr_delay, na.rm = true) sd_arr <- sd(flights$arr_delay, na.rm = true) cat('arrival delay:\\n') cat('mean:', round(mean_arr, 2), '\\n') cat('median:', median_arr, '\\n') cat('sd:', round(sd_arr, 2), '\\n\\n') cat('departure delay:\\n') cat('mean:', round(mean(flights$dep_delay, na.rm = true), 2), '\\n') cat('median:', median(flights$dep_delay, na.rm = true), '\\n') cat('sd:', round(sd(flights$dep_delay, na.rm = true), 2), '\\n')"
+    },
+    {
+      "id": "CB10_17",
+      "title": "arrival and departure delay statistics",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "arrival and departure delay statistics",
+      "marks": 10,
+      "tags": [
+        "nycflights13",
+        "mean",
+        "median",
+        "sd",
+        "arr_delay",
+        "dep_delay"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "arrival and departure delay statistics probability distributions and statistical analysis in r r arrival and departure delay statistics nycflights13 mean median sd arr_delay dep_delay nycflights13 mean median sd arr_delay dep_delay code-based 10 mark questions bank with r code using the nycflights13 dataset, write an r program to compute the mean, median, and standard deviation of arrival delay and departure delay. display the results neatly and interpret them. library(nycflights13) flights <- nycflights13::flights mean_arr <- mean(flights$arr_delay, na.rm = true) median_arr <- median(flights$arr_delay, na.rm = true) sd_arr <- sd(flights$arr_delay, na.rm = true) cat('arrival delay:\\n') cat('mean:', round(mean_arr, 2), '\\n') cat('median:', median_arr, '\\n') cat('sd:', round(sd_arr, 2), '\\n\\n') cat('departure delay:\\n') cat('mean:', round(mean(flights$dep_delay, na.rm = true), 2), '\\n') cat('median:', median(flights$dep_delay, na.rm = true), '\\n') cat('sd:', round(sd(flights$dep_delay, na.rm = true), 2), '\\n')"
+    },
+    {
+      "id": "CB10_10",
+      "title": "boxplot comparison",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "boxplot comparison",
+      "marks": 10,
+      "tags": [
+        "boxplot",
+        "A",
+        "B",
+        "latent heat"
+      ],
+      "segment": "probablity",
+      "searchText": "boxplot comparison probability distributions and statistical analysis in r r boxplot comparison boxplot a b latent heat boxplot a b latent heat code-based 10 mark questions bank with r code for the two independent samples a and b of latent heat measurements, write an r program to create comparative boxplots. explain how medians, spread, and possible outliers can be visually compared. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) boxplot(a, b, names = c('method a', 'method b'))"
+    },
+    {
+      "id": "CB10_10",
+      "title": "boxplot comparison",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "boxplot comparison",
+      "marks": 10,
+      "tags": [
+        "boxplot",
+        "A",
+        "B",
+        "latent heat"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "boxplot comparison probability distributions and statistical analysis in r r boxplot comparison boxplot a b latent heat boxplot a b latent heat code-based 10 mark questions bank with r code for the two independent samples a and b of latent heat measurements, write an r program to create comparative boxplots. explain how medians, spread, and possible outliers can be visually compared. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) boxplot(a, b, names = c('method a', 'method b'))"
+    },
+    {
+      "id": "CB10_18",
+      "title": "carrier consistency analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "carrier consistency analysis",
+      "marks": 10,
+      "tags": [
+        "group_by",
+        "summarise",
+        "arrange",
+        "carrier",
+        "sd_arr_delay"
+      ],
+      "segment": "probablity",
+      "searchText": "carrier consistency analysis probability distributions and statistical analysis in r r carrier consistency analysis group_by summarise arrange carrier sd_arr_delay group_by summarise arrange carrier sd_arr_delay code-based 10 mark questions bank with r code write an r program using dplyr to group flights by carrier, compute the standard deviation of arrival delay for each carrier, sort them, and identify the most consistent airline. library(nycflights13) library(dplyr) flights <- nycflights13::flights carrier_sd <- flights %>% group_by(carrier) %>% summarise(sd_arr_delay = sd(arr_delay, na.rm = true), .groups = 'drop') %>% arrange(sd_arr_delay) print(carrier_sd) cat('most consistent airline:\\n') print(carrier_sd[1, ])"
+    },
+    {
+      "id": "CB10_18",
+      "title": "carrier consistency analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "carrier consistency analysis",
+      "marks": 10,
+      "tags": [
+        "group_by",
+        "summarise",
+        "arrange",
+        "carrier",
+        "sd_arr_delay"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "carrier consistency analysis probability distributions and statistical analysis in r r carrier consistency analysis group_by summarise arrange carrier sd_arr_delay group_by summarise arrange carrier sd_arr_delay code-based 10 mark questions bank with r code write an r program using dplyr to group flights by carrier, compute the standard deviation of arrival delay for each carrier, sort them, and identify the most consistent airline. library(nycflights13) library(dplyr) flights <- nycflights13::flights carrier_sd <- flights %>% group_by(carrier) %>% summarise(sd_arr_delay = sd(arr_delay, na.rm = true), .groups = 'drop') %>% arrange(sd_arr_delay) print(carrier_sd) cat('most consistent airline:\\n') print(carrier_sd[1, ])"
+    },
+    {
+      "id": "CB10_24",
+      "title": "chi square test on categorical data",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "chi square test on categorical data",
+      "marks": 10,
+      "tags": [
+        "chisq.test",
+        "origin",
+        "on-time arrival",
+        "association"
+      ],
+      "segment": "probablity",
+      "searchText": "chi square test on categorical data probability distributions and statistical analysis in r r chi square test on categorical data chisq.test origin on-time arrival association chisq.test origin on-time arrival association code-based 10 mark questions bank with r code write an r program to create a contingency table between flight origin and whether the flight arrived on time, then perform pearson’s chi-square test. display the table, test result, and print whether the association is significant. library(nycflights13) library(dplyr) flights <- nycflights13::flights fl_test <- flights %>% filter(!is.na(arr_delay)) %>% mutate(arrived_on_time = abs(arr_delay) <= 5) tab_origin <- table(fl_test$origin, fl_test$arrived_on_time) print(tab_origin) chi_result <- chisq.test(tab_origin) print(chi_result) if (chi_result$p.value < 0.05) { cat('significant association between origin and on-time arrival.\\n') } else { cat('no significant association.\\n') }"
+    },
+    {
+      "id": "CB10_24",
+      "title": "chi square test on categorical data",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "chi square test on categorical data",
+      "marks": 10,
+      "tags": [
+        "chisq.test",
+        "origin",
+        "on-time arrival",
+        "association"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "chi square test on categorical data probability distributions and statistical analysis in r r chi square test on categorical data chisq.test origin on-time arrival association chisq.test origin on-time arrival association code-based 10 mark questions bank with r code write an r program to create a contingency table between flight origin and whether the flight arrived on time, then perform pearson’s chi-square test. display the table, test result, and print whether the association is significant. library(nycflights13) library(dplyr) flights <- nycflights13::flights fl_test <- flights %>% filter(!is.na(arr_delay)) %>% mutate(arrived_on_time = abs(arr_delay) <= 5) tab_origin <- table(fl_test$origin, fl_test$arrived_on_time) print(tab_origin) chi_result <- chisq.test(tab_origin) print(chi_result) if (chi_result$p.value < 0.05) { cat('significant association between origin and on-time arrival.\\n') } else { cat('no significant association.\\n') }"
+    },
+    {
+      "id": "CB10_12",
+      "title": "classical t test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "classical t test",
+      "marks": 10,
+      "tags": [
+        "t.test",
+        "var.equal = TRUE",
+        "pooled variance"
+      ],
+      "segment": "probablity",
+      "searchText": "classical t test probability distributions and statistical analysis in r r classical t test t.test var.equal = true pooled variance t.test var.equal = true pooled variance code-based 10 mark questions bank with r code write an r program to perform the classical two-sample t-test on samples a and b by assuming equal variances. compare its result with welch’s t-test. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) t.test(a, b, var.equal = true)"
+    },
+    {
+      "id": "CB10_12",
+      "title": "classical t test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "classical t test",
+      "marks": 10,
+      "tags": [
+        "t.test",
+        "var.equal = TRUE",
+        "pooled variance"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "classical t test probability distributions and statistical analysis in r r classical t test t.test var.equal = true pooled variance t.test var.equal = true pooled variance code-based 10 mark questions bank with r code write an r program to perform the classical two-sample t-test on samples a and b by assuming equal variances. compare its result with welch’s t-test. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) t.test(a, b, var.equal = true)"
+    },
+    {
+      "id": "CB10_15",
+      "title": "custom two sample t statistic function",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "custom two sample t statistic function",
+      "marks": 10,
+      "tags": [
+        "function",
+        "twosam",
+        "pooled variance",
+        "manual t statistic"
+      ],
+      "segment": "probablity",
+      "searchText": "custom two sample t statistic function probability distributions and statistical analysis in r r custom two sample t statistic function function twosam pooled variance manual t statistic function twosam pooled variance manual t statistic code-based 10 mark questions bank with r code write a user-defined r function twosam(y1, y2) to manually compute the pooled-variance two-sample t-statistic. apply it to the samples a and b and verify the result. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) twosam <- function(y1, y2) { n1 <- length(y1) n2 <- length(y2) yb1 <- mean(y1) yb2 <- mean(y2) s1 <- var(y1) s2 <- var(y2) s <- ((n1 - 1) * s1 + (n2 - 1) * s2) / (n1 + n2 - 2) (yb1 - yb2) / sqrt(s * (1 / n1 + 1 / n2)) } twosam(a, b)"
+    },
+    {
+      "id": "CB10_15",
+      "title": "custom two sample t statistic function",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "custom two sample t statistic function",
+      "marks": 10,
+      "tags": [
+        "function",
+        "twosam",
+        "pooled variance",
+        "manual t statistic"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "custom two sample t statistic function probability distributions and statistical analysis in r r custom two sample t statistic function function twosam pooled variance manual t statistic function twosam pooled variance manual t statistic code-based 10 mark questions bank with r code write a user-defined r function twosam(y1, y2) to manually compute the pooled-variance two-sample t-statistic. apply it to the samples a and b and verify the result. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) twosam <- function(y1, y2) { n1 <- length(y1) n2 <- length(y2) yb1 <- mean(y1) yb2 <- mean(y2) s1 <- var(y1) s2 <- var(y2) s <- ((n1 - 1) * s1 + (n2 - 1) * s2) / (n1 + n2 - 2) (yb1 - yb2) / sqrt(s * (1 / n1 + 1 / n2)) } twosam(a, b)"
+    },
+    {
+      "id": "js-debounce",
+      "title": "Debounce a function",
+      "subject": "",
+      "language": "javascript",
+      "topic": "",
+      "marks": null,
+      "tags": [
+        "performance",
+        "events",
+        "utility"
+      ],
+      "segment": "javascript",
+      "searchText": "debounce a function javascript performance events utility performance events utility delay execution until calls stop happening for the configured wait window. function debounce(fn, wait = 250) { let timeoutid; return function debounced(...args) { cleartimeout(timeoutid); timeoutid = settimeout(() => fn.apply(this, args), wait); }; }"
+    },
+    {
+      "id": "CB10_07",
+      "title": "ecdf with fitted normal cdf",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "ecdf with fitted normal cdf",
+      "marks": 10,
+      "tags": [
+        "ecdf",
+        "pnorm",
+        "normal fit",
+        "overlay"
+      ],
+      "segment": "probablity",
+      "searchText": "ecdf with fitted normal cdf probability distributions and statistical analysis in r r ecdf with fitted normal cdf ecdf pnorm normal fit overlay ecdf pnorm normal fit overlay code-based 10 mark questions bank with r code subset faithful$eruptions to values greater than 3, plot the ecdf of the subset, and overlay a fitted normal cdf using pnorm() with sample mean and variance. write the complete r code and explain how the comparison is useful. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] plot(ecdf(long), do.points = false, verticals = true) x <- seq(3, 5.4, 0.01) lines( x, pnorm(x, mean = mean(long), sd = sqrt(var(long))), lty = 3 )"
+    },
+    {
+      "id": "CB10_07",
+      "title": "ecdf with fitted normal cdf",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "ecdf with fitted normal cdf",
+      "marks": 10,
+      "tags": [
+        "ecdf",
+        "pnorm",
+        "normal fit",
+        "overlay"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "ecdf with fitted normal cdf probability distributions and statistical analysis in r r ecdf with fitted normal cdf ecdf pnorm normal fit overlay ecdf pnorm normal fit overlay code-based 10 mark questions bank with r code subset faithful$eruptions to values greater than 3, plot the ecdf of the subset, and overlay a fitted normal cdf using pnorm() with sample mean and variance. write the complete r code and explain how the comparison is useful. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] plot(ecdf(long), do.points = false, verticals = true) x <- seq(3, 5.4, 0.01) lines( x, pnorm(x, mean = mean(long), sd = sqrt(var(long))), lty = 3 )"
+    },
+    {
+      "id": "CB10_06",
+      "title": "empirical cdf",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "empirical cdf",
+      "marks": 10,
+      "tags": [
+        "ecdf",
+        "CDF",
+        "plot"
+      ],
+      "segment": "probablity",
+      "searchText": "empirical cdf probability distributions and statistical analysis in r r empirical cdf ecdf cdf plot ecdf cdf plot code-based 10 mark questions bank with r code write an r program to plot the empirical cumulative distribution function of faithful$eruptions using ecdf(). explain how the empirical cdf estimates p(x <= x) directly from data. data(faithful) plot(ecdf(faithful$eruptions), do.points = false, verticals = true)"
+    },
+    {
+      "id": "CB10_06",
+      "title": "empirical cdf",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "empirical cdf",
+      "marks": 10,
+      "tags": [
+        "ecdf",
+        "CDF",
+        "plot"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "empirical cdf probability distributions and statistical analysis in r r empirical cdf ecdf cdf plot ecdf cdf plot code-based 10 mark questions bank with r code write an r program to plot the empirical cumulative distribution function of faithful$eruptions using ecdf(). explain how the empirical cdf estimates p(x <= x) directly from data. data(faithful) plot(ecdf(faithful$eruptions), do.points = false, verticals = true)"
+    },
+    {
+      "id": "react-use-effect-fetch",
+      "title": "Fetch data in React useEffect",
+      "subject": "",
+      "language": "react",
+      "topic": "",
+      "marks": null,
+      "tags": [
+        "react",
+        "hooks",
+        "fetch"
+      ],
+      "segment": "react",
+      "searchText": "fetch data in react useeffect react react hooks fetch react hooks fetch simple component-level fetch example with loading and cleanup protection. import { useeffect, usestate } from \"react\"; export function userslist() { const [users, setusers] = usestate([]); const [loading, setloading] = usestate(true); useeffect(() => { let cancelled = false; async function loadusers() { const response = await fetch(\"/api/users\"); const data = await response.json(); if (!cancelled) { setusers(data); setloading(false); } } loadusers(); return () => { cancelled = true; }; }, []); if (loading) { return <p>loading...</p>; } return <pre>{json.stringify(users, null, 2)}</pre>; }"
+    },
+    {
+      "id": "js-fetch-json",
+      "title": "Fetch JSON with async/await",
+      "subject": "",
+      "language": "javascript",
+      "topic": "",
+      "marks": null,
+      "tags": [
+        "fetch",
+        "api",
+        "json"
+      ],
+      "segment": "javascript",
+      "searchText": "fetch json with async/await javascript fetch api json fetch api json basic async fetch flow that returns parsed json and throws on http errors. async function getjson(url) { const response = await fetch(url); if (!response.ok) { throw new error(`request failed: ${response.status}`); } return response.json(); }"
+    },
+    {
+      "id": "CB10_05",
+      "title": "histogram density rug",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "histogram density rug",
+      "marks": 10,
+      "tags": [
+        "hist",
+        "density",
+        "rug",
+        "kernel density"
+      ],
+      "segment": "probablity",
+      "searchText": "histogram density rug probability distributions and statistical analysis in r r histogram density rug hist density rug kernel density hist density rug kernel density code-based 10 mark questions bank with r code write an r program to plot a histogram of faithful$eruptions with probability scaling, add a kernel density estimate using density(), and add a rug plot. explain the significance of prob = true, density(), and rug(). data(faithful) hist( faithful$eruptions, breaks = seq(1.6, 5.2, 0.2), prob = true, main = 'histogram of eruptions' ) lines(density(faithful$eruptions, bw = 0.1)) rug(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_05",
+      "title": "histogram density rug",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "histogram density rug",
+      "marks": 10,
+      "tags": [
+        "hist",
+        "density",
+        "rug",
+        "kernel density"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "histogram density rug probability distributions and statistical analysis in r r histogram density rug hist density rug kernel density hist density rug kernel density code-based 10 mark questions bank with r code write an r program to plot a histogram of faithful$eruptions with probability scaling, add a kernel density estimate using density(), and add a rug plot. explain the significance of prob = true, density(), and rug(). data(faithful) hist( faithful$eruptions, breaks = seq(1.6, 5.2, 0.2), prob = true, main = 'histogram of eruptions' ) lines(density(faithful$eruptions, bw = 0.1)) rug(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_20",
+      "title": "interval grouping using cut",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "interval grouping using cut",
+      "marks": 10,
+      "tags": [
+        "cut",
+        "dep_delay",
+        "interval data",
+        "table"
+      ],
+      "segment": "probablity",
+      "searchText": "interval grouping using cut probability distributions and statistical analysis in r r interval grouping using cut cut dep_delay interval data table cut dep_delay interval data table code-based 10 mark questions bank with r code write an r program to group departure delay into intervals using cut() with breaks from -100 to 500 in steps of 50. display the frequency table and compare the grouped data with the original mean and standard deviation. library(nycflights13) library(dplyr) flights <- nycflights13::flights flights_grouped <- flights %>% filter(!is.na(dep_delay)) %>% mutate(delay_group = cut(dep_delay, breaks = seq(-100, 500, by = 50), include.lowest = true)) print(table(flights_grouped$delay_group)) cat('original mean:', round(mean(flights$dep_delay, na.rm = true), 2), '\\n') cat('original sd:', round(sd(flights$dep_delay, na.rm = true), 2), '\\n')"
+    },
+    {
+      "id": "CB10_20",
+      "title": "interval grouping using cut",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "interval grouping using cut",
+      "marks": 10,
+      "tags": [
+        "cut",
+        "dep_delay",
+        "interval data",
+        "table"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "interval grouping using cut probability distributions and statistical analysis in r r interval grouping using cut cut dep_delay interval data table cut dep_delay interval data table code-based 10 mark questions bank with r code write an r program to group departure delay into intervals using cut() with breaks from -100 to 500 in steps of 50. display the frequency table and compare the grouped data with the original mean and standard deviation. library(nycflights13) library(dplyr) flights <- nycflights13::flights flights_grouped <- flights %>% filter(!is.na(dep_delay)) %>% mutate(delay_group = cut(dep_delay, breaks = seq(-100, 500, by = 50), include.lowest = true)) print(table(flights_grouped$delay_group)) cat('original mean:', round(mean(flights$dep_delay, na.rm = true), 2), '\\n') cat('original sd:', round(sd(flights$dep_delay, na.rm = true), 2), '\\n')"
+    },
+    {
+      "id": "CB10_02",
+      "title": "normal distribution functions",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "normal distribution functions",
+      "marks": 10,
+      "tags": [
+        "dnorm",
+        "pnorm",
+        "qnorm",
+        "rnorm",
+        "normal distribution"
+      ],
+      "segment": "probablity",
+      "searchText": "normal distribution functions probability distributions and statistical analysis in r r normal distribution functions dnorm pnorm qnorm rnorm normal distribution dnorm pnorm qnorm rnorm normal distribution code-based 10 mark questions bank with r code write an r program to generate a sequence from -3 to 3 and use dnorm(), pnorm(), qnorm(), and rnorm() on it. print the density values, cumulative probabilities, 95th percentile, and 10 random samples. comment on the purpose of each function. x <- seq(-3, 3, length.out = 100) density_values <- dnorm(x) cdf_values <- pnorm(x) percentile_95 <- qnorm(0.95) random_samples <- rnorm(10) print(density_values) print(cdf_values) cat('95th percentile:', percentile_95, '\\n') print(random_samples)"
+    },
+    {
+      "id": "CB10_02",
+      "title": "normal distribution functions",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "normal distribution functions",
+      "marks": 10,
+      "tags": [
+        "dnorm",
+        "pnorm",
+        "qnorm",
+        "rnorm",
+        "normal distribution"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "normal distribution functions probability distributions and statistical analysis in r r normal distribution functions dnorm pnorm qnorm rnorm normal distribution dnorm pnorm qnorm rnorm normal distribution code-based 10 mark questions bank with r code write an r program to generate a sequence from -3 to 3 and use dnorm(), pnorm(), qnorm(), and rnorm() on it. print the density values, cumulative probabilities, 95th percentile, and 10 random samples. comment on the purpose of each function. x <- seq(-3, 3, length.out = 100) density_values <- dnorm(x) cdf_values <- pnorm(x) percentile_95 <- qnorm(0.95) random_samples <- rnorm(10) print(density_values) print(cdf_values) cat('95th percentile:', percentile_95, '\\n') print(random_samples)"
+    },
+    {
+      "id": "CB10_09",
+      "title": "normality tests",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "normality tests",
+      "marks": 10,
+      "tags": [
+        "shapiro.test",
+        "ks.test",
+        "normality test"
+      ],
+      "segment": "probablity",
+      "searchText": "normality tests probability distributions and statistical analysis in r r normality tests shapiro.test ks.test normality test shapiro.test ks.test normality test code-based 10 mark questions bank with r code write an r program to perform the shapiro-wilk test and one-sample kolmogorov-smirnov test for the long eruption times from the faithful dataset. display the test statistics and p-values, and interpret the results. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] shapiro.test(long) ks.test( long, 'pnorm', mean = mean(long), sd = sqrt(var(long)) )"
+    },
+    {
+      "id": "CB10_09",
+      "title": "normality tests",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "normality tests",
+      "marks": 10,
+      "tags": [
+        "shapiro.test",
+        "ks.test",
+        "normality test"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "normality tests probability distributions and statistical analysis in r r normality tests shapiro.test ks.test normality test shapiro.test ks.test normality test code-based 10 mark questions bank with r code write an r program to perform the shapiro-wilk test and one-sample kolmogorov-smirnov test for the long eruption times from the faithful dataset. display the test statistics and p-values, and interpret the results. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] shapiro.test(long) ks.test( long, 'pnorm', mean = mean(long), sd = sqrt(var(long)) )"
+    },
+    {
+      "id": "CB10_25",
+      "title": "package loading automation",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "package loading automation",
+      "marks": 10,
+      "tags": [
+        "requireNamespace",
+        "install.packages",
+        "library",
+        "for loop"
+      ],
+      "segment": "probablity",
+      "searchText": "package loading automation probability distributions and statistical analysis in r r package loading automation requirenamespace install.packages library for loop requirenamespace install.packages library for loop code-based 10 mark questions bank with r code write an r program that stores package names in a vector, checks whether each package is installed, installs missing packages, and then loads them using a for loop. required_packages <- c('nycflights13', 'dplyr', 'ggplot2', 'tidyr', 'moments') for (pkg in required_packages) { if (!requirenamespace(pkg, quietly = true)) { install.packages(pkg, dependencies = true) } library(pkg, character.only = true) } cat('packages loaded successfully\\n')"
+    },
+    {
+      "id": "CB10_25",
+      "title": "package loading automation",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "package loading automation",
+      "marks": 10,
+      "tags": [
+        "requireNamespace",
+        "install.packages",
+        "library",
+        "for loop"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "package loading automation probability distributions and statistical analysis in r r package loading automation requirenamespace install.packages library for loop requirenamespace install.packages library for loop code-based 10 mark questions bank with r code write an r program that stores package names in a vector, checks whether each package is installed, installs missing packages, and then loads them using a for loop. required_packages <- c('nycflights13', 'dplyr', 'ggplot2', 'tidyr', 'moments') for (pkg in required_packages) { if (!requirenamespace(pkg, quietly = true)) { install.packages(pkg, dependencies = true) } library(pkg, character.only = true) } cat('packages loaded successfully\\n')"
+    },
+    {
+      "id": "CB10_23",
+      "title": "pdf style visualization",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "pdf style visualization",
+      "marks": 10,
+      "tags": [
+        "geom_histogram",
+        "geom_density",
+        "PDF",
+        "departure delay"
+      ],
+      "segment": "probablity",
+      "searchText": "pdf style visualization probability distributions and statistical analysis in r r pdf style visualization geom_histogram geom_density pdf departure delay geom_histogram geom_density pdf departure delay code-based 10 mark questions bank with r code write an r program using ggplot2 to visualize the probability density of departure delay with a histogram and overlaid density curve. label the axes and title appropriately. library(nycflights13) library(ggplot2) flights <- nycflights13::flights x <- flights$dep_delay[!is.na(flights$dep_delay)] ggplot(data.frame(x), aes(x = x)) + geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') + geom_density(linewidth = 1, color = 'red') + theme_minimal() + labs(title = 'pdf of departure delay', x = 'departure delay', y = 'density')"
+    },
+    {
+      "id": "CB10_23",
+      "title": "pdf style visualization",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "pdf style visualization",
+      "marks": 10,
+      "tags": [
+        "geom_histogram",
+        "geom_density",
+        "PDF",
+        "departure delay"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "pdf style visualization probability distributions and statistical analysis in r r pdf style visualization geom_histogram geom_density pdf departure delay geom_histogram geom_density pdf departure delay code-based 10 mark questions bank with r code write an r program using ggplot2 to visualize the probability density of departure delay with a histogram and overlaid density curve. label the axes and title appropriately. library(nycflights13) library(ggplot2) flights <- nycflights13::flights x <- flights$dep_delay[!is.na(flights$dep_delay)] ggplot(data.frame(x), aes(x = x)) + geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') + geom_density(linewidth = 1, color = 'red') + theme_minimal() + labs(title = 'pdf of departure delay', x = 'departure delay', y = 'density')"
+    },
+    {
+      "id": "CB10_08",
+      "title": "qq plot",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "qq plot",
+      "marks": 10,
+      "tags": [
+        "qqnorm",
+        "qqline",
+        "normality"
+      ],
+      "segment": "probablity",
+      "searchText": "qq plot probability distributions and statistical analysis in r r qq plot qqnorm qqline normality qqnorm qqline normality code-based 10 mark questions bank with r code write an r program to draw a q-q plot for the long eruption times from the faithful dataset and add the reference line using qqline(). explain how deviation from the straight line indicates non-normality. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] par(pty = 's') qqnorm(long) qqline(long)"
+    },
+    {
+      "id": "CB10_08",
+      "title": "qq plot",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "qq plot",
+      "marks": 10,
+      "tags": [
+        "qqnorm",
+        "qqline",
+        "normality"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "qq plot probability distributions and statistical analysis in r r qq plot qqnorm qqline normality qqnorm qqline normality code-based 10 mark questions bank with r code write an r program to draw a q-q plot for the long eruption times from the faithful dataset and add the reference line using qqline(). explain how deviation from the straight line indicates non-normality. data(faithful) long <- faithful$eruptions[faithful$eruptions > 3] par(pty = 's') qqnorm(long) qqline(long)"
+    },
+    {
+      "id": "CB10_16",
+      "title": "qr decomposition regression helper",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "qr decomposition regression helper",
+      "marks": 10,
+      "tags": [
+        "qr",
+        "qr.coef",
+        "custom function",
+        "regression"
+      ],
+      "segment": "probablity",
+      "searchText": "qr decomposition regression helper probability distributions and statistical analysis in r r qr decomposition regression helper qr qr.coef custom function regression qr qr.coef custom function regression code-based 10 mark questions bank with r code write an r function bslash(x, y) that uses qr decomposition to compute regression coefficients. create a small design matrix and response vector, apply the function, and explain the output. bslash <- function(x, y) { x <- qr(x) qr.coef(x, y) } xmat <- cbind(1, rnorm(10)) yvar <- rnorm(10) bslash(xmat, yvar)"
+    },
+    {
+      "id": "CB10_16",
+      "title": "qr decomposition regression helper",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "qr decomposition regression helper",
+      "marks": 10,
+      "tags": [
+        "qr",
+        "qr.coef",
+        "custom function",
+        "regression"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "qr decomposition regression helper probability distributions and statistical analysis in r r qr decomposition regression helper qr qr.coef custom function regression qr qr.coef custom function regression code-based 10 mark questions bank with r code write an r function bslash(x, y) that uses qr decomposition to compute regression coefficients. create a small design matrix and response vector, apply the function, and explain the output. bslash <- function(x, y) { x <- qr(x) qr.coef(x, y) } xmat <- cbind(1, rnorm(10)) yvar <- rnorm(10) bslash(xmat, yvar)"
+    },
+    {
+      "id": "CB10_21",
+      "title": "quantile analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "quantile analysis",
+      "marks": 10,
+      "tags": [
+        "quantile",
+        "dep_delay",
+        "quartiles"
+      ],
+      "segment": "probablity",
+      "searchText": "quantile analysis probability distributions and statistical analysis in r r quantile analysis quantile dep_delay quartiles quantile dep_delay quartiles code-based 10 mark questions bank with r code write an r program to compute the 25th, 50th, and 75th percentiles of departure delay in the nycflights13 dataset. explain what these quartiles indicate about the data. library(nycflights13) flights <- nycflights13::flights quantile(flights$dep_delay, probs = c(0.25, 0.5, 0.75), na.rm = true)"
+    },
+    {
+      "id": "CB10_21",
+      "title": "quantile analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "quantile analysis",
+      "marks": 10,
+      "tags": [
+        "quantile",
+        "dep_delay",
+        "quartiles"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "quantile analysis probability distributions and statistical analysis in r r quantile analysis quantile dep_delay quartiles quantile dep_delay quartiles code-based 10 mark questions bank with r code write an r program to compute the 25th, 50th, and 75th percentiles of departure delay in the nycflights13 dataset. explain what these quartiles indicate about the data. library(nycflights13) flights <- nycflights13::flights quantile(flights$dep_delay, probs = c(0.25, 0.5, 0.75), na.rm = true)"
+    },
+    {
+      "id": "CB10_22",
+      "title": "random variable distribution of departure delay",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "random variable distribution of departure delay",
+      "marks": 10,
+      "tags": [
+        "mean",
+        "variance",
+        "skewness",
+        "kurtosis",
+        "density plot"
+      ],
+      "segment": "probablity",
+      "searchText": "random variable distribution of departure delay probability distributions and statistical analysis in r r random variable distribution of departure delay mean variance skewness kurtosis density plot mean variance skewness kurtosis density plot code-based 10 mark questions bank with r code treat departure delay as a random variable x. write an r program to compute e[x], var(x), skewness, and kurtosis. plot the histogram with density curve and comment on the distribution shape. library(nycflights13) library(ggplot2) library(moments) flights <- nycflights13::flights x <- flights$dep_delay[!is.na(flights$dep_delay)] cat('e[x]:', round(mean(x), 2), '\\n') cat('var(x):', round(var(x), 2), '\\n') cat('skewness:', round(moments::skewness(x, na.rm = true), 3), '\\n') cat('kurtosis:', round(moments::kurtosis(x, na.rm = true), 3), '\\n') ggplot(data.frame(x), aes(x = x)) + geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') + geom_density(linewidth = 1, color = 'red') + theme_minimal() + labs(title = 'pdf of departure delay', x = 'departure delay', y = 'density')"
+    },
+    {
+      "id": "CB10_22",
+      "title": "random variable distribution of departure delay",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "random variable distribution of departure delay",
+      "marks": 10,
+      "tags": [
+        "mean",
+        "variance",
+        "skewness",
+        "kurtosis",
+        "density plot"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "random variable distribution of departure delay probability distributions and statistical analysis in r r random variable distribution of departure delay mean variance skewness kurtosis density plot mean variance skewness kurtosis density plot code-based 10 mark questions bank with r code treat departure delay as a random variable x. write an r program to compute e[x], var(x), skewness, and kurtosis. plot the histogram with density curve and comment on the distribution shape. library(nycflights13) library(ggplot2) library(moments) flights <- nycflights13::flights x <- flights$dep_delay[!is.na(flights$dep_delay)] cat('e[x]:', round(mean(x), 2), '\\n') cat('var(x):', round(var(x), 2), '\\n') cat('skewness:', round(moments::skewness(x, na.rm = true), 3), '\\n') cat('kurtosis:', round(moments::kurtosis(x, na.rm = true), 3), '\\n') ggplot(data.frame(x), aes(x = x)) + geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') + geom_density(linewidth = 1, color = 'red') + theme_minimal() + labs(title = 'pdf of departure delay', x = 'departure delay', y = 'density')"
+    },
+    {
+      "id": "python-read-json",
+      "title": "Read JSON from a file",
+      "subject": "",
+      "language": "python",
+      "topic": "",
+      "marks": null,
+      "tags": [
+        "json",
+        "files",
+        "basics"
+      ],
+      "segment": "python",
+      "searchText": "read json from a file python json files basics json files basics open a json file with a context manager and parse it into python objects. import json with open(\"data.json\", \"r\", encoding=\"utf-8\") as file: payload = json.load(file) print(payload)"
+    },
+    {
+      "id": "CB10_19",
+      "title": "speed distribution analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "speed distribution analysis",
+      "marks": 10,
+      "tags": [
+        "mutate",
+        "speed_mph",
+        "histogram",
+        "skewness",
+        "ggplot2"
+      ],
+      "segment": "probablity",
+      "searchText": "speed distribution analysis probability distributions and statistical analysis in r r speed distribution analysis mutate speed_mph histogram skewness ggplot2 mutate speed_mph histogram skewness ggplot2 code-based 10 mark questions bank with r code write an r program to calculate flight speed in miles per hour using distance and air_time from the nycflights13 dataset. compute the mean, median, and skewness of speed and plot its histogram using ggplot2. library(nycflights13) library(dplyr) library(ggplot2) library(moments) flights <- nycflights13::flights flights_speed <- flights %>% filter(!is.na(air_time), air_time > 0) %>% mutate(speed_mph = distance / (air_time / 60)) cat('mean speed:', round(mean(flights_speed$speed_mph, na.rm = true), 2), '\\n') cat('median speed:', round(median(flights_speed$speed_mph, na.rm = true), 2), '\\n') cat('skewness:', round(moments::skewness(flights_speed$speed_mph, na.rm = true), 3), '\\n') ggplot(flights_speed, aes(x = speed_mph)) + geom_histogram(bins = 50, fill = 'skyblue', color = 'black') + theme_minimal() + labs(title = 'distribution of flight speeds', x = 'speed (mph)', y = 'frequency')"
+    },
+    {
+      "id": "CB10_19",
+      "title": "speed distribution analysis",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "speed distribution analysis",
+      "marks": 10,
+      "tags": [
+        "mutate",
+        "speed_mph",
+        "histogram",
+        "skewness",
+        "ggplot2"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "speed distribution analysis probability distributions and statistical analysis in r r speed distribution analysis mutate speed_mph histogram skewness ggplot2 mutate speed_mph histogram skewness ggplot2 code-based 10 mark questions bank with r code write an r program to calculate flight speed in miles per hour using distance and air_time from the nycflights13 dataset. compute the mean, median, and skewness of speed and plot its histogram using ggplot2. library(nycflights13) library(dplyr) library(ggplot2) library(moments) flights <- nycflights13::flights flights_speed <- flights %>% filter(!is.na(air_time), air_time > 0) %>% mutate(speed_mph = distance / (air_time / 60)) cat('mean speed:', round(mean(flights_speed$speed_mph, na.rm = true), 2), '\\n') cat('median speed:', round(median(flights_speed$speed_mph, na.rm = true), 2), '\\n') cat('skewness:', round(moments::skewness(flights_speed$speed_mph, na.rm = true), 3), '\\n') ggplot(flights_speed, aes(x = speed_mph)) + geom_histogram(bins = 50, fill = 'skyblue', color = 'black') + theme_minimal() + labs(title = 'distribution of flight speeds', x = 'speed (mph)', y = 'frequency')"
+    },
+    {
+      "id": "CB10_14",
+      "title": "split and for loop with regression lines",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "split and for loop with regression lines",
+      "marks": 10,
+      "tags": [
+        "split",
+        "for loop",
+        "lsfit",
+        "grouped plots"
+      ],
+      "segment": "probablity",
+      "searchText": "split and for loop with regression lines probability distributions and statistical analysis in r r split and for loop with regression lines split for loop lsfit grouped plots split for loop lsfit grouped plots code-based 10 mark questions bank with r code write an r program that generates random vectors x and y, splits them according to a random factor ind, and then plots each group separately with a fitted regression line using lsfit(). explain the use of split() and for loop in this context. set.seed(1) x <- rnorm(50) y <- rnorm(50) ind <- factor(sample(1:3, 50, replace = true)) xc <- split(x, ind) yc <- split(y, ind) for (i in seq_along(xc)) { plot(xc[[i]], yc[[i]]) abline(lsfit(xc[[i]], yc[[i]])) }"
+    },
+    {
+      "id": "CB10_14",
+      "title": "split and for loop with regression lines",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "split and for loop with regression lines",
+      "marks": 10,
+      "tags": [
+        "split",
+        "for loop",
+        "lsfit",
+        "grouped plots"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "split and for loop with regression lines probability distributions and statistical analysis in r r split and for loop with regression lines split for loop lsfit grouped plots split for loop lsfit grouped plots code-based 10 mark questions bank with r code write an r program that generates random vectors x and y, splits them according to a random factor ind, and then plots each group separately with a fitted regression line using lsfit(). explain the use of split() and for loop in this context. set.seed(1) x <- rnorm(50) y <- rnorm(50) ind <- factor(sample(1:3, 50, replace = true)) xc <- split(x, ind) yc <- split(y, ind) for (i in seq_along(xc)) { plot(xc[[i]], yc[[i]]) abline(lsfit(xc[[i]], yc[[i]])) }"
+    },
+    {
+      "id": "CB10_04",
+      "title": "stem and leaf plot",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "stem and leaf plot",
+      "marks": 10,
+      "tags": [
+        "stem",
+        "faithful",
+        "distribution"
+      ],
+      "segment": "probablity",
+      "searchText": "stem and leaf plot probability distributions and statistical analysis in r r stem and leaf plot stem faithful distribution stem faithful distribution code-based 10 mark questions bank with r code write an r program to generate a stem-and-leaf plot for faithful$eruptions. explain how the plot preserves the original data values and how it helps in understanding the distribution. data(faithful) stem(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_04",
+      "title": "stem and leaf plot",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "stem and leaf plot",
+      "marks": 10,
+      "tags": [
+        "stem",
+        "faithful",
+        "distribution"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "stem and leaf plot probability distributions and statistical analysis in r r stem and leaf plot stem faithful distribution stem faithful distribution code-based 10 mark questions bank with r code write an r program to generate a stem-and-leaf plot for faithful$eruptions. explain how the plot preserves the original data values and how it helps in understanding the distribution. data(faithful) stem(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_03",
+      "title": "summary statistics of built-in dataset",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "summary statistics of built-in dataset",
+      "marks": 10,
+      "tags": [
+        "faithful",
+        "summary",
+        "fivenum",
+        "dataset"
+      ],
+      "segment": "probablity",
+      "searchText": "summary statistics of built-in dataset probability distributions and statistical analysis in r r summary statistics of built-in dataset faithful summary fivenum dataset faithful summary fivenum dataset code-based 10 mark questions bank with r code using the built-in faithful dataset in r, write a program to display the summary() and fivenum() of the eruptions variable. interpret the output in terms of minimum, quartiles, median, mean, and maximum. data(faithful) summary(faithful$eruptions) fivenum(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_03",
+      "title": "summary statistics of built-in dataset",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "summary statistics of built-in dataset",
+      "marks": 10,
+      "tags": [
+        "faithful",
+        "summary",
+        "fivenum",
+        "dataset"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "summary statistics of built-in dataset probability distributions and statistical analysis in r r summary statistics of built-in dataset faithful summary fivenum dataset faithful summary fivenum dataset code-based 10 mark questions bank with r code using the built-in faithful dataset in r, write a program to display the summary() and fivenum() of the eruptions variable. interpret the output in terms of minimum, quartiles, median, mean, and maximum. data(faithful) summary(faithful$eruptions) fivenum(faithful$eruptions)"
+    },
+    {
+      "id": "CB10_01",
+      "title": "t distribution and F distribution",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "t distribution and F distribution",
+      "marks": 10,
+      "tags": [
+        "pt",
+        "qf",
+        "t distribution",
+        "F distribution",
+        "p-value",
+        "critical value"
+      ],
+      "segment": "probablity",
+      "searchText": "t distribution and f distribution probability distributions and statistical analysis in r r t distribution and f distribution pt qf t distribution f distribution p-value critical value pt qf t distribution f distribution p-value critical value code-based 10 mark questions bank with r code write an r program to compute the two-tailed p-value for a student's t-distribution with t = -2.43 and df = 13. also compute the upper 1% critical value of the f-distribution with df1 = 2 and df2 = 7. display the results clearly and explain the role of pt() and qf(). t_p_value <- 2 * pt(-2.43, df = 13) f_critical <- qf(0.01, df1 = 2, df2 = 7, lower.tail = false) cat('two-tailed p-value:', t_p_value, '\\n') cat('upper 1% critical value of f(2,7):', f_critical, '\\n')"
+    },
+    {
+      "id": "CB10_01",
+      "title": "t distribution and F distribution",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "t distribution and F distribution",
+      "marks": 10,
+      "tags": [
+        "pt",
+        "qf",
+        "t distribution",
+        "F distribution",
+        "p-value",
+        "critical value"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "t distribution and f distribution probability distributions and statistical analysis in r r t distribution and f distribution pt qf t distribution f distribution p-value critical value pt qf t distribution f distribution p-value critical value code-based 10 mark questions bank with r code write an r program to compute the two-tailed p-value for a student's t-distribution with t = -2.43 and df = 13. also compute the upper 1% critical value of the f-distribution with df1 = 2 and df2 = 7. display the results clearly and explain the role of pt() and qf(). t_p_value <- 2 * pt(-2.43, df = 13) f_critical <- qf(0.01, df1 = 2, df2 = 7, lower.tail = false) cat('two-tailed p-value:', t_p_value, '\\n') cat('upper 1% critical value of f(2,7):', f_critical, '\\n')"
+    },
+    {
+      "id": "CB10_11",
+      "title": "welch t test and variance test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "welch t test and variance test",
+      "marks": 10,
+      "tags": [
+        "t.test",
+        "var.test",
+        "Welch",
+        "F-test"
+      ],
+      "segment": "probablity",
+      "searchText": "welch t test and variance test probability distributions and statistical analysis in r r welch t test and variance test t.test var.test welch f-test t.test var.test welch f-test code-based 10 mark questions bank with r code write an r program to perform welch’s two-sample t-test and f-test for equality of variances on the samples a and b. report the null hypotheses, test statistics, p-values, and conclusions. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) t.test(a, b) var.test(a, b)"
+    },
+    {
+      "id": "CB10_11",
+      "title": "welch t test and variance test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "welch t test and variance test",
+      "marks": 10,
+      "tags": [
+        "t.test",
+        "var.test",
+        "Welch",
+        "F-test"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "welch t test and variance test probability distributions and statistical analysis in r r welch t test and variance test t.test var.test welch f-test t.test var.test welch f-test code-based 10 mark questions bank with r code write an r program to perform welch’s two-sample t-test and f-test for equality of variances on the samples a and b. report the null hypotheses, test statistics, p-values, and conclusions. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) t.test(a, b) var.test(a, b)"
+    },
+    {
+      "id": "CB10_13",
+      "title": "wilcoxon rank sum test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "wilcoxon rank sum test",
+      "marks": 10,
+      "tags": [
+        "wilcox.test",
+        "non-parametric",
+        "rank sum"
+      ],
+      "segment": "probablity",
+      "searchText": "wilcoxon rank sum test probability distributions and statistical analysis in r r wilcoxon rank sum test wilcox.test non-parametric rank sum wilcox.test non-parametric rank sum code-based 10 mark questions bank with r code write an r program to perform the wilcoxon rank-sum test on samples a and b. explain why this test is called non-parametric and how it differs from the t-test. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) wilcox.test(a, b)"
+    },
+    {
+      "id": "CB10_13",
+      "title": "wilcoxon rank sum test",
+      "subject": "Probability Distributions and Statistical Analysis in R",
+      "language": "r",
+      "topic": "wilcoxon rank sum test",
+      "marks": 10,
+      "tags": [
+        "wilcox.test",
+        "non-parametric",
+        "rank sum"
+      ],
+      "segment": "r-question-bank",
+      "searchText": "wilcoxon rank sum test probability distributions and statistical analysis in r r wilcoxon rank sum test wilcox.test non-parametric rank sum wilcox.test non-parametric rank sum code-based 10 mark questions bank with r code write an r program to perform the wilcoxon rank-sum test on samples a and b. explain why this test is called non-parametric and how it differs from the t-test. a <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05, 80.03, 80.02, 80.00, 80.02) b <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97) wilcox.test(a, b)"
+    }
+  ]
+}
