@@ -1,15 +1,11 @@
 {
-  "title": "Code-Based 10 Mark Questions Bank with R Code",
+  "title": "Code-Based 20 Mark Questions Bank with R Code",
   "subject": "Probability Distributions and Statistical Analysis in R",
   "source_files": ["Assignment 3", "Assignment 4"],
-  "based_on": [
-    ":contentReference[oaicite:0]{index=0}",
-    ":contentReference[oaicite:1]{index=1}"
-  ],
   "questions": [
     {
-      "id": "CB10_01",
-      "marks": 10,
+      "id": "CB20_01",
+      "marks": 20,
       "topic": "t distribution and F distribution",
       "keywords": [
         "pt",
@@ -23,112 +19,112 @@
       "code": "t_p_value <- 2 * pt(-2.43, df = 13)\nf_critical <- qf(0.01, df1 = 2, df2 = 7, lower.tail = FALSE)\ncat('Two-tailed p-value:', t_p_value, '\\n')\ncat('Upper 1% critical value of F(2,7):', f_critical, '\\n')"
     },
     {
-      "id": "CB10_02",
-      "marks": 10,
+      "id": "CB20_02",
+      "marks": 20,
       "topic": "normal distribution functions",
       "keywords": ["dnorm", "pnorm", "qnorm", "rnorm", "normal distribution"],
       "question": "Write an R program to generate a sequence from -3 to 3 and use dnorm(), pnorm(), qnorm(), and rnorm() on it. Print the density values, cumulative probabilities, 95th percentile, and 10 random samples. Comment on the purpose of each function.",
       "code": "x <- seq(-3, 3, length.out = 100)\ndensity_values <- dnorm(x)\ncdf_values <- pnorm(x)\npercentile_95 <- qnorm(0.95)\nrandom_samples <- rnorm(10)\nprint(density_values)\nprint(cdf_values)\ncat('95th percentile:', percentile_95, '\\n')\nprint(random_samples)"
     },
     {
-      "id": "CB10_03",
-      "marks": 10,
+      "id": "CB20_03",
+      "marks": 20,
       "topic": "summary statistics of built-in dataset",
       "keywords": ["faithful", "summary", "fivenum", "dataset"],
       "question": "Using the built-in faithful dataset in R, write a program to display the summary() and fivenum() of the eruptions variable. Interpret the output in terms of minimum, quartiles, median, mean, and maximum.",
       "code": "data(faithful)\nsummary(faithful$eruptions)\nfivenum(faithful$eruptions)"
     },
     {
-      "id": "CB10_04",
-      "marks": 10,
+      "id": "CB20_04",
+      "marks": 20,
       "topic": "stem and leaf plot",
       "keywords": ["stem", "faithful", "distribution"],
       "question": "Write an R program to generate a stem-and-leaf plot for faithful$eruptions. Explain how the plot preserves the original data values and how it helps in understanding the distribution.",
       "code": "data(faithful)\nstem(faithful$eruptions)"
     },
     {
-      "id": "CB10_05",
-      "marks": 10,
+      "id": "CB20_05",
+      "marks": 20,
       "topic": "histogram density rug",
       "keywords": ["hist", "density", "rug", "kernel density"],
       "question": "Write an R program to plot a histogram of faithful$eruptions with probability scaling, add a kernel density estimate using density(), and add a rug plot. Explain the significance of prob = TRUE, density(), and rug().",
       "code": "data(faithful)\nhist(\n  faithful$eruptions,\n  breaks = seq(1.6, 5.2, 0.2),\n  prob = TRUE,\n  main = 'Histogram of eruptions'\n)\nlines(density(faithful$eruptions, bw = 0.1))\nrug(faithful$eruptions)"
     },
     {
-      "id": "CB10_06",
-      "marks": 10,
+      "id": "CB20_06",
+      "marks": 20,
       "topic": "empirical cdf",
       "keywords": ["ecdf", "CDF", "plot"],
       "question": "Write an R program to plot the empirical cumulative distribution function of faithful$eruptions using ecdf(). Explain how the empirical CDF estimates P(X <= x) directly from data.",
       "code": "data(faithful)\nplot(ecdf(faithful$eruptions), do.points = FALSE, verticals = TRUE)"
     },
     {
-      "id": "CB10_07",
-      "marks": 10,
+      "id": "CB20_07",
+      "marks": 20,
       "topic": "ecdf with fitted normal cdf",
       "keywords": ["ecdf", "pnorm", "normal fit", "overlay"],
       "question": "Subset faithful$eruptions to values greater than 3, plot the ECDF of the subset, and overlay a fitted normal CDF using pnorm() with sample mean and variance. Write the complete R code and explain how the comparison is useful.",
       "code": "data(faithful)\nlong <- faithful$eruptions[faithful$eruptions > 3]\nplot(ecdf(long), do.points = FALSE, verticals = TRUE)\nx <- seq(3, 5.4, 0.01)\nlines(\n  x,\n  pnorm(x, mean = mean(long), sd = sqrt(var(long))),\n  lty = 3\n)"
     },
     {
-      "id": "CB10_08",
-      "marks": 10,
+      "id": "CB20_08",
+      "marks": 20,
       "topic": "qq plot",
       "keywords": ["qqnorm", "qqline", "normality"],
       "question": "Write an R program to draw a Q-Q plot for the long eruption times from the faithful dataset and add the reference line using qqline(). Explain how deviation from the straight line indicates non-normality.",
       "code": "data(faithful)\nlong <- faithful$eruptions[faithful$eruptions > 3]\npar(pty = 's')\nqqnorm(long)\nqqline(long)"
     },
     {
-      "id": "CB10_09",
-      "marks": 10,
+      "id": "CB20_09",
+      "marks": 20,
       "topic": "normality tests",
       "keywords": ["shapiro.test", "ks.test", "normality test"],
       "question": "Write an R program to perform the Shapiro-Wilk test and one-sample Kolmogorov-Smirnov test for the long eruption times from the faithful dataset. Display the test statistics and p-values, and interpret the results.",
       "code": "data(faithful)\nlong <- faithful$eruptions[faithful$eruptions > 3]\nshapiro.test(long)\nks.test(\n  long,\n  'pnorm',\n  mean = mean(long),\n  sd = sqrt(var(long))\n)"
     },
     {
-      "id": "CB10_10",
-      "marks": 10,
+      "id": "CB20_10",
+      "marks": 20,
       "topic": "boxplot comparison",
       "keywords": ["boxplot", "A", "B", "latent heat"],
       "question": "For the two independent samples A and B of latent heat measurements, write an R program to create comparative boxplots. Explain how medians, spread, and possible outliers can be visually compared.",
       "code": "A <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04,\n       79.97, 80.05, 80.03, 80.02, 80.00, 80.02)\nB <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)\nboxplot(A, B, names = c('Method A', 'Method B'))"
     },
     {
-      "id": "CB10_11",
-      "marks": 10,
+      "id": "CB20_11",
+      "marks": 20,
       "topic": "welch t test and variance test",
       "keywords": ["t.test", "var.test", "Welch", "F-test"],
       "question": "Write an R program to perform Welch’s two-sample t-test and F-test for equality of variances on the samples A and B. Report the null hypotheses, test statistics, p-values, and conclusions.",
       "code": "A <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04,\n       79.97, 80.05, 80.03, 80.02, 80.00, 80.02)\nB <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)\nt.test(A, B)\nvar.test(A, B)"
     },
     {
-      "id": "CB10_12",
-      "marks": 10,
+      "id": "CB20_12",
+      "marks": 20,
       "topic": "classical t test",
       "keywords": ["t.test", "var.equal = TRUE", "pooled variance"],
       "question": "Write an R program to perform the classical two-sample t-test on samples A and B by assuming equal variances. Compare its result with Welch’s t-test.",
       "code": "A <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04,\n       79.97, 80.05, 80.03, 80.02, 80.00, 80.02)\nB <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)\nt.test(A, B, var.equal = TRUE)"
     },
     {
-      "id": "CB10_13",
-      "marks": 10,
+      "id": "CB20_13",
+      "marks": 20,
       "topic": "wilcoxon rank sum test",
       "keywords": ["wilcox.test", "non-parametric", "rank sum"],
       "question": "Write an R program to perform the Wilcoxon rank-sum test on samples A and B. Explain why this test is called non-parametric and how it differs from the t-test.",
       "code": "A <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04,\n       79.97, 80.05, 80.03, 80.02, 80.00, 80.02)\nB <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)\nwilcox.test(A, B)"
     },
     {
-      "id": "CB10_14",
-      "marks": 10,
+      "id": "CB20_14",
+      "marks": 20,
       "topic": "split and for loop with regression lines",
       "keywords": ["split", "for loop", "lsfit", "grouped plots"],
       "question": "Write an R program that generates random vectors x and y, splits them according to a random factor ind, and then plots each group separately with a fitted regression line using lsfit(). Explain the use of split() and for loop in this context.",
       "code": "set.seed(1)\nx <- rnorm(50)\ny <- rnorm(50)\nind <- factor(sample(1:3, 50, replace = TRUE))\nxc <- split(x, ind)\nyc <- split(y, ind)\nfor (i in seq_along(xc)) {\n  plot(xc[[i]], yc[[i]])\n  abline(lsfit(xc[[i]], yc[[i]]))\n}"
     },
     {
-      "id": "CB10_15",
-      "marks": 10,
+      "id": "CB20_15",
+      "marks": 20,
       "topic": "custom two sample t statistic function",
       "keywords": [
         "function",
@@ -140,16 +136,16 @@
       "code": "A <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04,\n       79.97, 80.05, 80.03, 80.02, 80.00, 80.02)\nB <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)\n\ntwosam <- function(y1, y2) {\n  n1 <- length(y1)\n  n2 <- length(y2)\n  yb1 <- mean(y1)\n  yb2 <- mean(y2)\n  s1 <- var(y1)\n  s2 <- var(y2)\n  s <- ((n1 - 1) * s1 + (n2 - 1) * s2) / (n1 + n2 - 2)\n  (yb1 - yb2) / sqrt(s * (1 / n1 + 1 / n2))\n}\n\ntwosam(A, B)"
     },
     {
-      "id": "CB10_16",
-      "marks": 10,
+      "id": "CB20_16",
+      "marks": 20,
       "topic": "qr decomposition regression helper",
       "keywords": ["qr", "qr.coef", "custom function", "regression"],
       "question": "Write an R function bslash(X, y) that uses QR decomposition to compute regression coefficients. Create a small design matrix and response vector, apply the function, and explain the output.",
       "code": "bslash <- function(X, y) {\n  X <- qr(X)\n  qr.coef(X, y)\n}\nXmat <- cbind(1, rnorm(10))\nyvar <- rnorm(10)\nbslash(Xmat, yvar)"
     },
     {
-      "id": "CB10_17",
-      "marks": 10,
+      "id": "CB20_17",
+      "marks": 20,
       "topic": "arrival and departure delay statistics",
       "keywords": [
         "nycflights13",
@@ -163,8 +159,8 @@
       "code": "library(nycflights13)\nflights <- nycflights13::flights\n\nmean_arr <- mean(flights$arr_delay, na.rm = TRUE)\nmedian_arr <- median(flights$arr_delay, na.rm = TRUE)\nsd_arr <- sd(flights$arr_delay, na.rm = TRUE)\n\ncat('Arrival Delay:\\n')\ncat('Mean:', round(mean_arr, 2), '\\n')\ncat('Median:', median_arr, '\\n')\ncat('SD:', round(sd_arr, 2), '\\n\\n')\n\ncat('Departure Delay:\\n')\ncat('Mean:', round(mean(flights$dep_delay, na.rm = TRUE), 2), '\\n')\ncat('Median:', median(flights$dep_delay, na.rm = TRUE), '\\n')\ncat('SD:', round(sd(flights$dep_delay, na.rm = TRUE), 2), '\\n')"
     },
     {
-      "id": "CB10_18",
-      "marks": 10,
+      "id": "CB20_18",
+      "marks": 20,
       "topic": "carrier consistency analysis",
       "keywords": [
         "group_by",
@@ -177,56 +173,56 @@
       "code": "library(nycflights13)\nlibrary(dplyr)\nflights <- nycflights13::flights\n\ncarrier_sd <- flights %>%\n  group_by(carrier) %>%\n  summarise(sd_arr_delay = sd(arr_delay, na.rm = TRUE), .groups = 'drop') %>%\n  arrange(sd_arr_delay)\n\nprint(carrier_sd)\ncat('Most Consistent Airline:\\n')\nprint(carrier_sd[1, ])"
     },
     {
-      "id": "CB10_19",
-      "marks": 10,
+      "id": "CB20_19",
+      "marks": 20,
       "topic": "speed distribution analysis",
       "keywords": ["mutate", "speed_mph", "histogram", "skewness", "ggplot2"],
       "question": "Write an R program to calculate flight speed in miles per hour using distance and air_time from the nycflights13 dataset. Compute the mean, median, and skewness of speed and plot its histogram using ggplot2.",
       "code": "library(nycflights13)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(moments)\nflights <- nycflights13::flights\n\nflights_speed <- flights %>%\n  filter(!is.na(air_time), air_time > 0) %>%\n  mutate(speed_mph = distance / (air_time / 60))\n\ncat('Mean Speed:', round(mean(flights_speed$speed_mph, na.rm = TRUE), 2), '\\n')\ncat('Median Speed:', round(median(flights_speed$speed_mph, na.rm = TRUE), 2), '\\n')\ncat('Skewness:', round(moments::skewness(flights_speed$speed_mph, na.rm = TRUE), 3), '\\n')\n\nggplot(flights_speed, aes(x = speed_mph)) +\n  geom_histogram(bins = 50, fill = 'skyblue', color = 'black') +\n  theme_minimal() +\n  labs(title = 'Distribution of Flight Speeds', x = 'Speed (mph)', y = 'Frequency')"
     },
     {
-      "id": "CB10_20",
-      "marks": 10,
+      "id": "CB20_20",
+      "marks": 20,
       "topic": "interval grouping using cut",
       "keywords": ["cut", "dep_delay", "interval data", "table"],
       "question": "Write an R program to group departure delay into intervals using cut() with breaks from -100 to 500 in steps of 50. Display the frequency table and compare the grouped data with the original mean and standard deviation.",
       "code": "library(nycflights13)\nlibrary(dplyr)\nflights <- nycflights13::flights\n\nflights_grouped <- flights %>%\n  filter(!is.na(dep_delay)) %>%\n  mutate(delay_group = cut(dep_delay,\n                           breaks = seq(-100, 500, by = 50),\n                           include.lowest = TRUE))\n\nprint(table(flights_grouped$delay_group))\ncat('Original Mean:', round(mean(flights$dep_delay, na.rm = TRUE), 2), '\\n')\ncat('Original SD:', round(sd(flights$dep_delay, na.rm = TRUE), 2), '\\n')"
     },
     {
-      "id": "CB10_21",
-      "marks": 10,
+      "id": "CB20_21",
+      "marks": 20,
       "topic": "quantile analysis",
       "keywords": ["quantile", "dep_delay", "quartiles"],
       "question": "Write an R program to compute the 25th, 50th, and 75th percentiles of departure delay in the nycflights13 dataset. Explain what these quartiles indicate about the data.",
       "code": "library(nycflights13)\nflights <- nycflights13::flights\nquantile(flights$dep_delay, probs = c(0.25, 0.5, 0.75), na.rm = TRUE)"
     },
     {
-      "id": "CB10_22",
-      "marks": 10,
+      "id": "CB20_22",
+      "marks": 20,
       "topic": "random variable distribution of departure delay",
       "keywords": ["mean", "variance", "skewness", "kurtosis", "density plot"],
       "question": "Treat departure delay as a random variable X. Write an R program to compute E[X], Var(X), skewness, and kurtosis. Plot the histogram with density curve and comment on the distribution shape.",
       "code": "library(nycflights13)\nlibrary(ggplot2)\nlibrary(moments)\nflights <- nycflights13::flights\n\nX <- flights$dep_delay[!is.na(flights$dep_delay)]\ncat('E[X]:', round(mean(X), 2), '\\n')\ncat('Var(X):', round(var(X), 2), '\\n')\ncat('Skewness:', round(moments::skewness(X, na.rm = TRUE), 3), '\\n')\ncat('Kurtosis:', round(moments::kurtosis(X, na.rm = TRUE), 3), '\\n')\n\nggplot(data.frame(X), aes(x = X)) +\n  geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') +\n  geom_density(linewidth = 1, color = 'red') +\n  theme_minimal() +\n  labs(title = 'PDF of Departure Delay', x = 'Departure Delay', y = 'Density')"
     },
     {
-      "id": "CB10_23",
-      "marks": 10,
+      "id": "CB20_23",
+      "marks": 20,
       "topic": "pdf style visualization",
       "keywords": ["geom_histogram", "geom_density", "PDF", "departure delay"],
       "question": "Write an R program using ggplot2 to visualize the probability density of departure delay with a histogram and overlaid density curve. Label the axes and title appropriately.",
       "code": "library(nycflights13)\nlibrary(ggplot2)\nflights <- nycflights13::flights\n\nX <- flights$dep_delay[!is.na(flights$dep_delay)]\n\nggplot(data.frame(X), aes(x = X)) +\n  geom_histogram(aes(y = after_stat(density)), bins = 60, fill = 'lightblue', color = 'black') +\n  geom_density(linewidth = 1, color = 'red') +\n  theme_minimal() +\n  labs(title = 'PDF of Departure Delay', x = 'Departure Delay', y = 'Density')"
     },
     {
-      "id": "CB10_24",
-      "marks": 10,
+      "id": "CB20_24",
+      "marks": 20,
       "topic": "chi square test on categorical data",
       "keywords": ["chisq.test", "origin", "on-time arrival", "association"],
       "question": "Write an R program to create a contingency table between flight origin and whether the flight arrived on time, then perform Pearson’s chi-square test. Display the table, test result, and print whether the association is significant.",
       "code": "library(nycflights13)\nlibrary(dplyr)\nflights <- nycflights13::flights\n\nfl_test <- flights %>%\n  filter(!is.na(arr_delay)) %>%\n  mutate(arrived_on_time = abs(arr_delay) <= 5)\n\ntab_origin <- table(fl_test$origin, fl_test$arrived_on_time)\nprint(tab_origin)\n\nchi_result <- chisq.test(tab_origin)\nprint(chi_result)\n\nif (chi_result$p.value < 0.05) {\n  cat('Significant association between origin and on-time arrival.\\n')\n} else {\n  cat('No significant association.\\n')\n}"
     },
     {
-      "id": "CB10_25",
-      "marks": 10,
+      "id": "CB20_25",
+      "marks": 20,
       "topic": "package loading automation",
       "keywords": [
         "requireNamespace",
